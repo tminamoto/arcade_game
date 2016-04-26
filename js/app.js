@@ -1,5 +1,6 @@
+'use strict';
+
 // Define game setting
-var gameStatus = "playing";
 var numOfItems = 0;
 
 // Define variables for Enemy
@@ -153,19 +154,15 @@ Item.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-function instantiation (){
+var  gameStatus = "playing";
+var  allEnemies = [];
 
-    gameStatus = "playing";
-
-    allEnemies = [];
-    for (var i=0; i< maxNumOfEnemy; i++) {
-        allEnemies.push(new Enemy(i));
-    }
-
-    player = new Player();
-    item = new Item();
-
+for (var i=0; i< maxNumOfEnemy; i++) {
+    allEnemies.push(new Enemy(i));
 }
+
+var player = new Player();
+var item = new Item();
 
 
 // This listens for key presses and sends the keys to your

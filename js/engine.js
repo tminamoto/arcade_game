@@ -1,3 +1,5 @@
+'use strict';
+
 /* Engine.js
  * This file provides the game loop functionality (update entities and render),
  * draws the initial game board on the screen, and then calls the update and
@@ -248,7 +250,16 @@ var Engine = (function(global) {
      */
     function reset() {
 
-        instantiation();
+        gameStatus = "playing";
+        allEnemies = [];
+
+        for (var i=0; i< maxNumOfEnemy; i++) {
+            allEnemies.push(new Enemy(i));
+        }
+
+        player = new Player();
+        item = new Item();
+
     }
 
     /* Go ahead and load all of the images we know we're going to need to
