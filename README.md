@@ -1,4 +1,4 @@
-# frontend-nanodegree-arcade-game
+# arcade_game
 P5: Classic Arcade Game Clone
 
 ### How to set up this application
